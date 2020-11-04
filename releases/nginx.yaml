@@ -1,8 +1,11 @@
 kind: Pod
 metadata:
   name: nginx-pod
+  namespace: demo
   labels:
     name: nginx
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   containers:
   - name: nginx
